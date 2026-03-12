@@ -6,12 +6,13 @@
 A robust web-based application for detecting synthetic media (deepfakes) in **images and audio** using state-of-the-art AI models like **EfficientNetV2** and **Wav2Vec2**. The platform offers an intuitive interface for media analysis while maintaining high security and privacy standards.
 
 ## Live Demo
+
 ![Demo](resources/images/Live_demo.gif)
 
 ## Key Features
 
 - **Advanced Media Analysis**: Detect manipulated content across multiple formats (images, audio)
-- **High-Performance AI Models**: 
+- **High-Performance AI Models**:
   - **EfficientNetV2** for image forgery detection
   - **Wav2Vec2** for detecting voice synthesis artifacts in audio
 - **User-Friendly Interface**: Drag-and-drop media upload with instant deepfake detection
@@ -34,7 +35,6 @@ The application integrates cutting-edge AI models with a clean web-based fronten
 ### System Architecture Diagram
 
 ![architecture diagram](resources/images/system_architecture.png)
-
 
 ## Project Structure
 
@@ -104,8 +104,8 @@ The application integrates cutting-edge AI models with a clean web-based fronten
 ### 1. Clone the Repository
 
 ```bash
-https://github.com/Akshayredekar07/Multimodal-Deepfake-Detection.git
-cd Multimodal-Deepfake-Detection/backend
+https://github.com/bh2619-k/DuoDetect-DeepFake.git
+cd DuoDetect-DeepFake/backend
 ```
 
 ### 2. Create and Activate Virtual Environment
@@ -129,8 +129,8 @@ pip install -r requirements.txt
 
 Ensure these models are present:
 
-* `models/audio_model/` (Wav2Vec2 model files)
-* `models/image_model/EfficientnetV2_model.pth`
+- `models/audio_model/` (Wav2Vec2 model files)
+- `models/image_model/EfficientnetV2_model.pth`
 
 Also verify paths in `config.yaml`.
 
@@ -175,37 +175,37 @@ Visit [http://localhost:8000](http://localhost:8000) to use the web app.
 1. **Homepage**: Learn how the platform works
 2. **Upload Media**: Use the upload page to submit JPG/PNG or MP3/WAV files
 3. **Detection Results**:
-   * Classification: Real or Fake
-   * Confidence Score
-   * If possible, anomaly visualization
+   - Classification: Real or Fake
+   - Confidence Score
+   - If possible, anomaly visualization
 4. **Security**: Your media is deleted immediately after detection
 
 ## Development Guide
 
 ### Backend (FastAPI)
 
-* `app/main.py`: Routes and endpoints
-* `app/image_detection.py`: EfficientNetV2 image classification logic
-* `app/audio_detection.py`: Wav2Vec2-based audio classification
-* `config.yaml`: Set paths to models and hyperparameters
+- `app/main.py`: Routes and endpoints
+- `app/image_detection.py`: EfficientNetV2 image classification logic
+- `app/audio_detection.py`: Wav2Vec2-based audio classification
+- `config.yaml`: Set paths to models and hyperparameters
 
 ### Frontend
 
-* HTML: `templates/*.html`
-* CSS: `templates/static/css/styles.css`
-* JavaScript: `templates/static/js/script.js`
+- HTML: `templates/*.html`
+- CSS: `templates/static/css/styles.css`
+- JavaScript: `templates/static/js/script.js`
 
 ### Training and Notebooks
 
-* Audio: `notebook/audio_detection/model_train_5.0.ipynb`
-* Image: `notebook/image_detection/model_training.py`
+- Audio: `notebook/audio_detection/model_train_5.0.ipynb`
+- Image: `notebook/image_detection/model_training.py`
 
 ## Testing
 
 Use sample files in the `test/` folder to verify output.
 
-* `test/deepfakes/`: Example fakes
-* `test/real/`: Example genuine files
+- `test/deepfakes/`: Example fakes
+- `test/real/`: Example genuine files
 
 ## Contributing
 
@@ -213,14 +213,3 @@ Use sample files in the `test/` folder to verify output.
 2. Create a new branch: `git checkout -b feature-name`
 3. Commit your changes
 4. Push and submit a PR
-
-## License
-
-This project is under the [MIT License](LICENSE).
-
-## Contact
-
-For help or suggestions:
-
-* File an issue in the GitHub repo
-* Email the maintainer: `akshayredekar04@gmail.com`
